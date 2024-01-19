@@ -10,7 +10,11 @@ ___
 _extremely_
 ___
 
-<sub>subscript</sub> 
+<sub>
+
+subscript
+
+</sub> 
 ___
 
 <sup>superscript</sup>

@@ -1,16 +1,50 @@
 <!DOCTYPE HTML>
-<html dir="ltr" lang="{{ site.locale | default: "en-US" }}">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
-        <title> Rapport </title>
+<html dir="ltr" lang="{{ site.locale | default: " en-US" }}">
 
-    </head>
-    <body>
-        <div id="page-wrapper" class="page-wrapper">
-            {{ content }}
-        </div>
-    </body>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
+    <title> Rapport </title>
+    <style>
+        body {
+            background: rgb(204, 204, 204);
+            font: 12pt "Tahoma";
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        article[size="A4"] {
+            display: block;
+            width: 21cm;
+            background: white;
+            padding: 1cm;
+            margin: 1cm auto;
+            /* margin-bottom: 0.5cm; */
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        }
+
+        @media print {
+
+            body,
+            article[size="A4"] {
+                margin: 0;
+                padding: initial;
+                box-shadow: initial;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="page-wrapper" class="page-wrapper">
+        {{ content }}
+    </div>
+</body>
+
 </html>
